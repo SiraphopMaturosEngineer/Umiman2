@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>รายการสั่งซื้อ (Admin) - StudyMate Essentials</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .admin-container {
+      margin: 3rem auto;
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: var(--border-radius-md);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+    }
+    .table-responsive {
+      overflow-x: auto;
+      margin-top: 1.5rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    th, td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    th {
+      background-color: var(--secondary-blue-light);
+      color: var(--text-dark);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    tr:hover {
+      background-color: var(--bg-main);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🎓</div>
+        StudyMate <span>Essentials</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้าทั้งหมด</a>
+        <a href="admin.html" style="color: var(--primary-peach); font-weight: 700;">ผู้ดูแลระบบ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="admin-container">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h2>📦 รายการสั่งซื้อสินค้าทั้งหมด</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">ดึงข้อมูลล่าสุดจากระบบจัดการคำสั่งซื้อ (Google Sheets)</p>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table id="ordersTable">
+          <thead>
+            <tr>
+              <th>วัน-เวลา</th>
+              <th>ชื่อลูกค้า</th>
+              <th>ช่องทางติดต่อ</th>
+              <th>รายการสินค้า</th>
+              <th>ราคารวม</th>
+              <th>หมายเหตุ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- ข้อมูล CSV จาก Google Sheets จะถูกเติมลงในนี้ผ่าน script.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 StudyMate Essentials (Uniman). All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

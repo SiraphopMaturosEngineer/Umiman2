@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สินค้าทั้งหมด - StudyMate Essentials</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🎓</div>
+        StudyMate <span>Essentials</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html" style="color: var(--primary-peach); font-weight: 700;">สินค้าทั้งหมด</a>
+        <a href="admin.html">สำหรับผู้ดูแลระบบ</a>
+      </nav>
+      <a href="product.html" class="cart-btn">
+        <span>ช้อปเลย</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 2rem;">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <h1 style="font-size: 2.2rem; font-weight: 700;">สินค้าทั้งหมดของเรา</h1>
+      <p style="color: var(--text-muted);">เลือกดูสินค้าที่ช่วยให้การเรียนและชีวิตในหอพักของคุณสบายขึ้น</p>
+    </div>
+
+    <div class="filter-section">
+      <div id="filter-bar" class="category-wrapper">
+        <button class="cat-btn active" data-category="all">ทั้งหมด</button>
+        <button class="cat-btn" data-category="ipad">อุปกรณ์ iPad</button>
+        <button class="cat-btn" data-category="stand">ขาตั้งพกพา</button>
+        <button class="cat-btn" data-category="powerbank">พาวเวอร์แบงก์</button>
+        <button class="cat-btn" data-category="card">สายคล้องบัตร</button>
+        <button class="cat-btn" data-category="kitchen">ครัวเด็กหอ</button>
+        <button class="cat-btn" data-category="lamp">โคมไฟ</button>
+        <button class="cat-btn" data-category="tumbler">กระบอกน้ำ</button>
+      </div>
+    </div>
+
+    <div id="product-list" class="product-grid">
+      </div>
+  </main>
+
+  <footer>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 StudyMate Essentials (Uniman). All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
